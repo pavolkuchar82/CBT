@@ -11,4 +11,4 @@ def get_releases(release_id):
     response = requests.get(base_url+endpoint)
     print(response)
 
-get_releases(28571377)
+get_releases(285a71377)
