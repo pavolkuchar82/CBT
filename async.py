@@ -4,7 +4,7 @@ from aiohttp import ClientSession
 base_url = "http://httpbin.org/"
 
 async def count():
-    for i in [1,2,3,4,5,6]:
+    for i in [1,2,3,4]:
         print(i)
         await asyncio.sleep(1)
 
@@ -20,3 +20,6 @@ async def get_delay(seconds):
 
 async def main():
     await asyncio.gather(get_delay(5), count())
+
+asyncio.run(main())
+print('okay, all finished getting')
