@@ -42,7 +42,9 @@ for i in range(0,30):
                sleep(backoffs["wait"])
 
                backoffs["wait"] *= backoffs["factor"]
+               # It multiplies right operand with the left operand and assign the result to left operand. (c *= a is equivalent to c = c * a)
                tries += 1
+               # += provides a convenient way to add a value to an existing variable and assign the new value back to the same variable
             elif response_code == 200:
                tries = 0
                response_code = -1
